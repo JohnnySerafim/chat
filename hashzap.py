@@ -22,11 +22,14 @@ import flet as ft
 
 # criar a função  principal (main) do seu aplicativo
 def main (pagina: ft.Page):
+   pagina.title = "EloNexu"
+   
+
    #Criar os elementos 
-   titulo = ft.Text("HashZap")
+   titulo = ft.Text("ELO|NEXU", text_align= "center", size=30, weight="bold",color="#d3d3d3")
 
 # criando janela
-   titulo_janela = ft.Text("Bem vindo ao HashZap")
+   titulo_janela = ft.Text("Bem vindo ao ELO|NEXU",color="#d3d3d3d5")
    
    def enviar_mensagem_tunel(mensagem):
         texto_mensagem = ft.Text(mensagem)
