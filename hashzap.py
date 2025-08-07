@@ -26,10 +26,12 @@ def main (pagina: ft.Page):
    
 
    #Criar os elementos 
-   titulo = ft.Text("ELO|NEXU", text_align= "center", size=30, weight="bold",color="#d3d3d3")
+   titulo = ft.Text("ELO | NEXU", text_align= "center", size=30, weight="bold",color="#d3d3d3")
 
 # criando janela
-   titulo_janela = ft.Text("Bem vindo ao ELO|NEXU",color="#d3d3d3d5")
+   titulo_janela = ft.Text(
+        """   👋 Bem-vindo ao Elo Nexu 
+            Mais que conversa, conexão real.""",color="#d3d3d3d5")
    
    def enviar_mensagem_tunel(mensagem):
         texto_mensagem = ft.Text(mensagem)
