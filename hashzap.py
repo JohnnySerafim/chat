@@ -23,8 +23,7 @@ import flet as ft
 # criar a função  principal (main) do seu aplicativo
 def main (pagina: ft.Page):
    pagina.title = "EloNexu"
-   usuarios_online = set()
-   contador_online = ft.Text("Usuários online: 0", color="blue")
+   
    
 
    #Criar os elementos 
@@ -59,8 +58,6 @@ def main (pagina: ft.Page):
    linha_mensagem = ft.Row([campo_mensagem,botao_enviar])
    def entrar_chat(evento):
         nome = campo_nome.value
-        usuarios_online.add(nome)
-        contador_online.value = f"Usuários online: {len(usuarios_online)}"
         pagina.pubsub.send_all(f"{campo_nome.value} entrou no Chat")
       # fechar ajanela / o Dialog
         janela.open= False
@@ -68,7 +65,7 @@ def main (pagina: ft.Page):
         pagina.remove(titulo)
         # remover o o botão
         pagina.remove(botao_iniciar)
-        pagina.add(contador_online)  # Adiciona o contador
+       
 
         # Criar o chat
         pagina.add(chat)
